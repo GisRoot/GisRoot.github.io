@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			/*#left {
+				background-image: url(img/left.jpg);
+				background-repeat: no-repeat;
+				height: 32px;
+				width: 10px;
+			}*/
+			
+			ul {
+				margin: 0px;
+				padding: 0px;
+				float: left;
+			}
+			
+			li {
+				background-image: url(img/bg1.jpg);
+				background-repeat: no-repeat;
+				height: 32px;
+				width: 83px;
+				text-align: center;
+				line-height: 35px;
+				font-size: 14px;
+				color: #ffffff;
+				font-weight: bold;
+				list-style: none;
+				float: left;
+			}
+			.change{
+				background-image: url(img/bg2.jpg) !important;
+				color: #000000;
+				font-size: 15px;
+			}
+			.bg{
+				background-image: url(img/bg1.jpg);
+				color: #ffffff;
+				font-size: 14px;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload = function() {
+				var nav = document.getElementById("linav");
+				var liArr = nav.getElementsByTagName("li");
+				for(var i = 0; i<liArr.length; i++) {
+					liArr[i].onmouseover = function() {
+						this.className = "change";
+					}
+					liArr[i].onmouseout = function() {
+						this.className = "bg";						
+					}
+				}
+			}
+		</script>
+	</head>
+
+	<body>
+		<img src="img/top.jpg" />
+		<div class="box" id="linav">
+			<ul>
+				<li>首页</li>
+				<li>家用电器</li>
+				<li>手机数码</li>
+				<li>日用百货</li>
+				<li>书籍</li>
+				<li>帮助中心</li>
+				<li>免费开店</li>
+				<li>全球资讯</li>
+			</ul>
+		</div>
+	</body>
+
+</html>
